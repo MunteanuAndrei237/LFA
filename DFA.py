@@ -1,5 +1,5 @@
 """
-Simple python program that verifies if a set of symbols is validated or not by a DFA.
+Simple python program that verifies if a set of symbols is accepted or not by a DFA.
 Uses data from "input.txt" as following:
 on first line number of states
 on second line the name of states ,separated by white space
@@ -8,6 +8,9 @@ on the next T lines transitions with this structure:source_state destination_sta
 on the next line the name of the starting state
 on the next line F the number of final states
 on the next F lines the name of one final state
+on the next line W the number of "words" to be verified 
+on the next W lines one set of symbols
+For every word there will be one otuput(yes if the word is accepted, no if the word is rejected)
 """
 if __name__ == '__main__':
       dateintrare=open("input.txt","r")
@@ -48,11 +51,11 @@ if __name__ == '__main__':
                         if starecurenta==starefinala:
                               valid=True
                   if valid==True:
-                        print("DA")
+                        print("YES")
                   else:
-                        print("NU")
+                        print("NO")
             else:
-                  print("NU")
+                  print("NO")
 
 
 
